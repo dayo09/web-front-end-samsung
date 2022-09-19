@@ -1,0 +1,20 @@
+/* Define standard variables and values for website */
+$base-font-size: 16px;
+$bgcolor: lightblue;
+$textcolor: darkblue;
+$fontsize: 18px;
+
+/* Use the variables */
+body {
+    background-color: $bgcolor;
+    color: $textcolor;
+    font-size: $fontsize;
+}
+
+@for $i from 1 through 6 {
+    @debug $i;
+
+    h#{$i} {
+        font-size: $base-font-size * $i;
+    }
+}

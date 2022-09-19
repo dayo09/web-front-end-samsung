@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "dev": "live-server example1 --host=localhost --port=3000 --no-brower",
+    "lint": "npx htmlhint example1/index.html"
+  },
+  "dependencies": {
+    "live-server": "^1.1.0"
+  },
+  "devDependencies": {
+    "htmlhint": "^1.1.4",
+    "sass": "^1.54.9",
+    "tailwindcss": "^3.1.8"
+  }
+}

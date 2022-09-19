@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<!-- "DOCTYPE" Document type을 기술해주는 표준 -->
+
+<!-- "html" 루트로 있어야함 -->
+<!-- "html lang" 언어-국가 정보 기입 -->
+<html lang="ko-KR">
+
+<head>
+    <!-- "meta" 는 empty tag 이므로 / 로 끝나야 한다." -->
+    <meta charset="UTF-8" />
+
+    <!-- "title" 은 페이지의 이름 -->
+    <title>1일차</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="웹 애플리케이션 구조 작성 방법을 학습합니다" />
+
+    <link rel="icon" href="assets/favicon.png" />
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <!--- Inline style -->
+
+</head>
+
+<body>
+
+    <!-- 헤더 > 내비게이션 > 대제목 > .. -->
+    <header>
+        <h1>
+            <a href=""><abbr title="Mozilla Developer Network">MDN</abbr></a>
+        </h1>
+    </header>
+
+    <nav>
+        <abbr title="HTML!"> 레이아웃 디자인 </abbr> 
+    </nav>
+
+
+    <div class="container content">
+        contents
+    </div>
+
+    <div class="container container--fluid navigation">
+        navigation
+    </div>
+
+    <div class="container container--fluid main">
+        main contents
+    </div>
+
+    <main>
+        <!-- 
+            
+            
+            article : 독립적인 요소들
+            aside: 옆에 있는 것들
+         -->
+
+    
+    <p>
+        a tag를 실습해봅니다.
+        (<a href="https://html.spec.whatwg.org/#the-a-element" target="_blank" rel="noopener noreferrer">참고</a>)
+    </p>
+
+    <section>
+        <h2>이미지와 피규어</h2>
+        <!--
+            @tag src
+            @property alt: 제대로 기술 안할시에 접근성 관련 문제로 소송도 걸리는 사례가 있음
+            @width 100%로 할 시에 화면을 가득 채운다 -->
+        <figure class="content">
+            <!-- figure
+                alt: figcaption과 겹치므로 그냥 비워두어야함
+            -->
+            <img class="image-fluid" src="assets/images/root-element.jpeg" />
+            <figcaption> 루트 엘레먼트를 도식화한 그림</figcaption>
+        </figure>
+    </section>
+
+
+    <div class="Container" stype="margin-bottom:20px"></div>
+
+    <section>
+        <h2>학습방법</h2>
+        <p>
+            온라인 <em>화상 강의의 특성 상</em>, 현장 강의를 수강하는 것과는 학습 환경이 다릅니다.
+        </p>
+        <p>
+            강의는 각 주제의 개념을 설명 함과 동시에 라이브 코딩을 진행합니다. 그러므로 배움과 익힘의 시간을 병행하되, 강의에서 다룬 내용을 잘 정리한 다음, 추후에 시간을 내서 다시 실습하며 익힐 것을 권장합니다.
+        </p>
+
+        <pre class="code-block" >
+            (1) 안녕
+            (2) 하
+            (3) 세요
+        </pre>
+    </section>
+    </main>    
+    
+    <section>
+        <h2>표 설계(design)</h2>
+
+        <table>
+            
+            <caption class="sr-only"> HTML 용어 설명 </caption>
+            <thead>
+                    <th scope="col">용어
+                    </th>
+                    <th scope="col">
+                        설명
+                    </th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Document</td>
+                    <td>문서</td>
+                </tr>
+                <tr>
+                    <td>Element</td>
+                    <td>요소</td>
+                </tr>
+                <tr>
+                    <td>Open Tag</td>
+                    <td>여는 태그</td>
+                </tr>
+                <tr>
+                    <td>Close Tag</td>
+                    <td>닫는 태그</td>
+                </tr>
+                <tr>
+                    <td>Self Closed Tag</td>
+                    <td>스스로 닫는 태그</td>
+                </tr>
+                <tr>
+                    <td>Attribute</td>
+                    <td>속성</td>
+                </tr>
+                <tr>
+                    <td>Value</td>
+                    <td>값</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </section>
+
+    <section>
+        <h2>행,열,제목을 가진 표</h2>
+        <table class="table">
+            <caption class="sr-only">
+            </caption>
+<colgroup>
+    
+                <col width="120" />
+                <col width="" />
+                <col width="60" />
+</colgroup>
+
+            <thead>
+                <tr>
+                    <th scope="col">차수</th>
+                    <th scope="col">학습주제</th>
+                    <th scope="col">시간</th>
+                </tr>                
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="raw">1일차 </td>
+                    <td>
+                        <ul class="table_list">
+                            <li>웹 프로그래밍의 이해</li>
+                            <li>웹 표준과 접근성</li>
+                            <li>HTML 마크업</li>
+                            <li>CSS 스타일링</li>
+                        </ul>
+                    </td>
+                    <!-- WAI-RIA -->
+                    <td><span aria-label="8시간">8H</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        
+    </section>
+
+
+    <footer class="site-info">
+        <small>
+            Website Privacy Notice
+Cookies
+Legal
+Community Participation Guidelines
+Visit Mozilla Corporation’s not-for-profit parent, the Mozilla Foundation.
+Portions of this content are ©1998–2022 by individual <a href="https://developer.mozilla.org/ko/docs/Web/HTML/Element/code">mozilla.org</a> contributors. Content available under a Creative Commons license.
+        </small>
+    </footer>
+</body>
+
+</html>

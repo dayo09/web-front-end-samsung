@@ -1,0 +1,138 @@
+/* CSS 스타일 언어 영역 */
+
+
+p {
+    color: darkblue;
+    margin-top: 0;
+    margin-bottom: 2px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* body * {
+    box-sizing: border-box;
+} */
+
+em {
+    font-style: normal;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+a {
+    color: rgb(255, 0, 251);
+    cursor: pointer;
+    text-decoration: underline;
+    /* text-decoration-color 안먹힘 */
+    text-decoration-color: rgb(51, 0, 255);
+    text-underline-offset: 3px;
+}
+
+.site-info {
+    margin: 20px;
+}
+
+img {
+    size: 700px;
+}
+
+figure {
+    display: block;
+    margin: 1em;
+    /* margin-left: 0em;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0; */
+}
+
+/* 태그가 아니라 클래스는 .으로 시작 */
+.container {
+    padding: 5px;
+    width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image-fluid {
+    width: 100%;
+    max-width: 500px;
+}
+
+.container--fluid {
+    width: 100%;
+    max-width: 500px;
+}
+
+.content {
+    background-color: indianred;
+    color: white;
+}
+
+.navigation {
+    background-color: aqua;
+}
+
+.main {
+    background-color: aqua;
+}
+
+figcaption {
+    font-size: 5px;
+}
+
+.abbr[title] {
+    cursor: help;
+    color: aliceblue;
+}
+
+.code-block {
+    padding: 1em;
+    background-color: black;
+    color: white;
+    line-height: 1.5;
+}
+
+.table {
+    width: 100%;
+    border-spacing: 10px;
+    border-collapse: separate;
+    border: 1px solid;
+}
+
+.table-flexible {
+    width: 100%;
+}
+
+.table th {
+    text-align: left;
+    background: rgb(51, 0, 255);
+}
+
+.table th,
+td {
+    border: 1px solid;
+    padding: 0.7em
+}
+
+.a11y-hidden,
+.sr-only {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.table_list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.table_list li:last-child {
+    margin-bottom: 0px;
+
+}
+
+.table_list li {
+    margin-bottom: 8px;
+
+}
