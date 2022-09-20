@@ -1,0 +1,23 @@
+@use '../variables';
+
+.container {
+    width: variables.$max-width;
+    background-color: beige;
+
+    margin: {
+        left: auto;
+        right: auto;
+    }
+
+    &--inner {
+        padding: {
+            left: 16px;
+            right: 16px;
+        }
+    }
+
+    &--fluid {
+        width: 100%;
+        max-width: variables.$max-width;
+    }
+}

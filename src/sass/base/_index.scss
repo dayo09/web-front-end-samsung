@@ -1,0 +1,13 @@
+@use '../variables';
+
+body {
+    margin: 0;
+    background: variables.$white;
+    color: variables.$black;
+
+}
+
+abbr[title] {
+    cursor: help;
+    text-decoration: none;
+}
