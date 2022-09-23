@@ -1,0 +1,18 @@
+### SASS
+
+- dart2js version이 권장된다.
+  - 유일하게 모듈 기능이 지원된다.
+- libsass, rubysass 등은 X
+
+### CSS의 변수는 아래처럼 생겼다.
+```css
+:root {
+  --red:
+}
+
+var(--red)
+```
+
+### Type
+
+Null /Array -> typeof 를 썼을때 Object라고 나옴
