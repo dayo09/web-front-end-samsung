@@ -3,11 +3,11 @@ import CartTotal from './CartTotal';
 import { useCart } from './CartContext';
 
 const CartFooter = ({ ...restProps }) => {
-  const {carts} = useCart();
+  const {carts:{totalPrice}} = useCart();
 
   return (
   <footer {...restProps}>
-    <CartTotal>{carts.totalPrice}</CartTotal>
+    <CartTotal>{totalPrice}</CartTotal>
   </footer>
 )};
 
