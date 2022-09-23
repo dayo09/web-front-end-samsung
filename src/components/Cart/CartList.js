@@ -3,13 +3,13 @@ import CartItem from './CartItem';
 import CartFooter from './CartFooter';
 import { func } from 'prop-types';
 
-export default function CartList({ products, total }) {
+export default function CartList({ products }) {
   return (
     <Container>
       {products.map((product) => (
         <CartItem key={product.id} product={product} />
       ))}
-      <CartFooter total={total} />
+      <CartFooter />
     </Container>
   );
 }

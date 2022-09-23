@@ -82,7 +82,6 @@ export default function App() {
         <Cart
           title={carts.title}
           products={carts.products}
-          total={carts.totalPrice}
         />
         </CartProvider>
       </Container>
