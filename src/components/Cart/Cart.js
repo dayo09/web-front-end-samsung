@@ -1,8 +1,11 @@
 import styled from 'styled-components/macro';
 import CartTitle from './CartTitle';
 import CartList from './CartList';
+import { useCart } from './CartContext';
 
-export function Cart({ title, products }) {
+export function Cart({ title }) {
+  const {carts: {products}} = useCart();
+  
   return (
     <Container>
       <CartTitle>{title}</CartTitle>
