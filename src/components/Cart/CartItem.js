@@ -6,11 +6,11 @@ import { useCart } from './CartContext';
 
 export default function CartItem({
   product: { id, photo, name, price, amount, maxAmount },
-  onUpdate,
   ...restProps
 }) {
 
   const {handleUpdateAmount} = useCart();
+  
   return (
     <Container {...restProps}>
       <Photo src={photo} alt="" />

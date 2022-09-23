@@ -2,11 +2,11 @@ import styled from 'styled-components/macro';
 import CartTitle from './CartTitle';
 import CartList from './CartList';
 
-export function Cart({ title, products, total, onUpdate }) {
+export function Cart({ title, products, total }) {
   return (
     <Container>
       <CartTitle>{title}</CartTitle>
-      <CartList products={products} total={total} onUpdate={onUpdate} />
+      <CartList products={products} total={total} />
     </Container>
   );
 }

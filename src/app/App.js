@@ -82,7 +82,6 @@ export default function App() {
           title={carts.title}
           products={carts.products}
           total={carts.totalPrice}
-          onUpdate={handleUpdateAmount}
         />
         </CartProvider>
       </Container>

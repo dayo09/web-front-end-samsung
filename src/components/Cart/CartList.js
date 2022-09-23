@@ -3,11 +3,11 @@ import CartItem from './CartItem';
 import CartFooter from './CartFooter';
 import { func } from 'prop-types';
 
-export default function CartList({ products, total, onUpdate }) {
+export default function CartList({ products, total }) {
   return (
     <Container>
       {products.map((product) => (
-        <CartItem key={product.id} product={product} onUpdate={onUpdate} />
+        <CartItem key={product.id} product={product} />
       ))}
       <CartFooter total={total} />
     </Container>
