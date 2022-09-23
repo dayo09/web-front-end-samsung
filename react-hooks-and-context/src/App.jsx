@@ -1,20 +1,40 @@
 import styles from './App.module.css';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import {
   // A11yHidden,
   // SR_Only,
   // Banner,
   Spinner,
   ErrorDisplay,
-  ErrorBoundary,
   FormControl,
   SkipToContent,
   Content,
 } from './components';
 
 import { useFetch } from './hooks/useFetch';
+import { AuthProvider } from './contents/auth';
 
 function App() {
+  const [currentUser, setCurrentUser] = useState(null);
+
+  const signIn = useCallback((currentUserInfo) => {
+    // 로그인 로직
+    setCurrentUser(currentUserInfo);
+  }, []);
+
+  const signOut = useCallback(() => {
+    // 로그인 로직
+  }, []);
+
+  const authValue = useMemo(
+    () => ({
+      currentUser,
+      signIn,
+      signOut,
+    }),
+    [currentUser]
+  );
+
   const containerRef = useRef(null);
 
   const [visible, setVisible] = useState(true);
@@ -48,7 +68,7 @@ function App() {
   }
 
   return (
-    <ErrorBoundary>
+    <AuthProvider value={authValue}>
       <div ref={containerRef} className={styles.container}>
         <SkipToContent />
         <FormControl
@@ -64,7 +84,7 @@ function App() {
         />
         {visible && <Content />}
       </div>
-    </ErrorBoundary>
+    </AuthProvider>
   );
 }
 

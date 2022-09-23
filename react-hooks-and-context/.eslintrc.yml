@@ -13,4 +13,4 @@ parserOptions:
   sourceType: module
 plugins:
   - react
-rules: { react/no-unknown-property: off }
+rules: { react/no-unknown-property: off, react/prop-types: warn }
