@@ -61,6 +61,7 @@ export default function App() {
 
   const cartValue = useMemo(
     ()=>({
+      carts,
       handleUpdateAmount
     }));
     //TODO ADD dependency array
