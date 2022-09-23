@@ -11,8 +11,4 @@ const CartFooter = ({ ...restProps }) => {
   </footer>
 )};
 
-CartFooter.propTypes = {
-  total: number,
-};
-
 export default CartFooter;

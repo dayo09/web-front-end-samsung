@@ -14,10 +14,6 @@ export default function CartList({ products }) {
   );
 }
 
-CartList.propTypes = {
-  onUpdate: func,
-};
-
 /* -------------------------------------------------------------------------- */
 
 const Container = styled.ul`
