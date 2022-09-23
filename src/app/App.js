@@ -1,8 +1,9 @@
 import axios from 'axios';
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import styled, { css } from 'styled-components/macro';
 import GlobalStyle from 'styles/GlobalStyle';
 import { Cart } from 'components';
+import { CartProvider } from 'components/Cart/CartContext';
 
 export default function App() {
   let [loading, setLoading] = useState(true);
@@ -58,6 +59,12 @@ export default function App() {
     }));
   }, []);
 
+  const cartValue = useMemo(
+    ()=>({
+      handleUpdateAmount
+    }));
+    //TODO ADD dependency array
+
   if (loading) {
     return <Loading role="alert">제품 정보 로딩 중...</Loading>;
   }
@@ -70,12 +77,14 @@ export default function App() {
     <>
       <GlobalStyle />
       <Container>
+        <CartProvider value={cartValue}>
         <Cart
           title={carts.title}
           products={carts.products}
           total={carts.totalPrice}
           onUpdate={handleUpdateAmount}
         />
+        </CartProvider>
       </Container>
     </>
   );
